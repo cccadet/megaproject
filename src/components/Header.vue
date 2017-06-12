@@ -12,19 +12,18 @@
           </a>
         </div>
         <div class="nav-right nav-menu">
-          <router-link :to="{ name: 'Hello' }" class="nav-item is-tab"><i class="fa fa-home"></i>&nbspHome</router-link>
-          <router-link :to="{ name: 'Hello' }" class="nav-item is-tab"><i class="fa fa-table"></i>&nbspServiços</router-link>
-          <router-link :to="{ name: 'Hello' }" class="nav-item is-tab"><i class="fa fa-table"></i>&nbspProjetos</router-link>
-          <router-link :to="{ name: 'Hello' }" class="nav-item is-tab"><i class="fa fa-envelope"></i>&nbspContato</router-link>
+          <router-link :to="{ name: 'Home' }" class="nav-item is-tab" exact><i class="fa fa-home"></i>&nbspHome</router-link>
+          <router-link :to="{ name: 'Services' }" class="nav-item is-tab"><i class="fa fa-table"></i>&nbspServiços</router-link>
+          <router-link :to="{ name: 'Projects' }" class="nav-item is-tab"><i class="fa fa-table"></i>&nbspProjetos</router-link>
+          <router-link :to="{ name: 'Contacts' }" class="nav-item is-tab"><i class="fa fa-envelope"></i>&nbspContato</router-link>
         </div>
       </nav>
-
     </div>
   </div>
 </template>
 <script>
   export default {
-    name: 'Home'
+    name: 'Header'
   }
 </script>
 <style scoped>

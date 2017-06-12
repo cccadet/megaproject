@@ -1,31 +1,28 @@
-<template>
-  <div id="app">
-    <nprogress-container></nprogress-container>
-    <cc-header></cc-header>
-    <div>
-        <div class="container is-fluid">
-          <cc-container></cc-container>
-          <router-view></router-view>
-        </div>
-    </div>
-  </div>
-  </div>
-</template>
-
 <script>
   import CcHeader from './components/Header'
-  import CcContainer from './components/Container.vue'
+  import CcFooter from './components/Footer'
   import nprogressContainer from './components/Common/NprogressContainer.vue'
 
   export default {
     name: 'app',
     components: {
       CcHeader,
-      CcContainer,
-      nprogressContainer
+      nprogressContainer,
+      CcFooter
     }
   }
 </script>
+
+<template>
+  <div id="app">
+    <nprogress-container></nprogress-container>
+    <cc-header></cc-header>
+    <section class="container is-fullheight">
+      <router-view></router-view>
+    </section>
+    <cc-footer></cc-footer>
+  </div>
+</template>
 
 <style>
   #app {
@@ -35,6 +32,7 @@
     text-align: center;
     color: #2c3e50;
   }
+
   .nprogress-container {
     position: fixed !important;
     width: 100%;
