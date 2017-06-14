@@ -1,85 +1,122 @@
 <script>
+
   export default {
-    name: 'Services'
+    name: 'Services',
+    data: () => ({
+      stitle: 'Serviços',
+      ssubtitle: 'Subtítulo'
+    }),
+    created () {
+      this.updateTitle()
+    },
+    methods: {
+      updateTitle: function () {
+        const payload = {
+          stitle: this.stitle
+        }
+        this.$store.commit('CHANGE_STITLE', payload)
+        const payload2 = {
+          ssubtitle: this.ssubtitle
+        }
+        this.$store.commit('CHANGE_SSUBTITLE', payload2)
+      }
+    }
   }
 </script>
 
 <template>
   <div>
-    <section class="section">
-      <div class="container">
-        <h1 class="title">Serviços</h1>
-        <h2 class="subtitle is-5">
-          Let this cover page describe a product or service.
-        </h2>
-        <br>
-        <div class="columns is-multiline is-mobile">
-          <!-- Coordenação de Obra -->
-          <div class="column is-half">
+    <section class="section background">
+      <div class="columns is-multiline is-mobile">
+        <!-- Coordenação de Obra -->
+        <div class="column is-half">
             <span class="box">
               <div class="columns ">
                 <div class="column is-5">
                   <div class="image is-1by1">
-                    <img src="https://placehold.it/500x500">
+                    <img src="../assets/img/imagem2.jpg">
                   </div>
                 </div>
-                <div class="column is-6 ">
-                  <div class="title is-6 has-text-muted">Coordenação de obra </div>
+                <div class="column is-7 ">
+                  <div class="title is-4 has-text-muted">
+                    <h3 class="title is-5">
+                      <a>
+                        <i class="fa fa-cog fa-spin fa-fw"></i>
+                        <span class="sr-only"></span>
+                        <strong>Coordenação de obra</strong>
+                      </a>
+                    </h3>
+                  </div>
                   <hr>
                   <ul class="has-text-left">
-                    <li>Instalações Mecânicas</li>
-                    <li>Instalações Elétricas</li>
-                    <li>Construção Civil</li>
+                    <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Instalações Mecânicas</p></li>
+                    <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Instalações Elétricas</p></li>
+                    <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Construção Civil</p></li>
                   </ul>
                   <br>
                 </div>
               </div>
             </span>
-          </div>
-          <!-- Coordenação de Obra -->
-          <div class="column is-half">
+        </div>
+        <!-- Instalações de Equipamentos -->
+        <div class="column is-half">
             <span class="box">
               <div class="columns ">
                 <div class="column is-5">
                   <div class="image is-1by1">
-                    <img src="https://placehold.it/500x500">
+                    <img src="../assets/img/imagem1.jpg">
                   </div>
                 </div>
-                <div class="column is-6 ">
-                  <div class="title is-6 has-text-muted">Coordenação de obra </div>
+                <div class="column is-7 ">
+                  <div class="title is-4 has-text-muted">
+                    <h3 class="title is-5">
+                      <a>
+                        <i class="fa fa-cog fa-spin fa-fw"></i>
+                        <span class="sr-only"></span>
+                        <strong>Instalações</strong>
+                      </a>
+                    </h3>
+                  </div>
                   <hr>
                   <ul class="has-text-left">
-                    <li>Instalações Mecânicas</li>
-                    <li>Instalações Elétricas</li>
-                    <li>Construção Civil</li>
+                    <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Equipamentos em Geral</p></li>
+                    <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Montagem Mecânica e Elétrica de Equipamentos </p></li>
+                    <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Instalações Mecânicas</p></li>
                   </ul>
                   <br>
                 </div>
               </div>
             </span>
-          </div>
-          <!-- Coordenação de Obra -->
-          <div class="column is-half">
+        </div>
+        <!-- Coordenação de Obra -->
+        <div class="column is-half">
             <span class="box">
               <div class="columns ">
                 <div class="column is-5">
                   <div class="image is-1by1">
-                    <img src="https://placehold.it/500x500">
+                    <img src="../assets/img/imagem2.jpg">
                   </div>
                 </div>
-                <div class="column is-6 ">
-                  <div class="title is-6 has-text-muted">Instalações de equipamento </div>
+                <div class="column is-7 ">
+                  <div class="title is-4 has-text-muted">
+                    <h3 class="title is-5">
+                      <a>
+                        <i class="fa fa-cog fa-spin fa-fw"></i>
+                        <span class="sr-only"></span>
+                        <strong>Instalações</strong>
+                      </a>
+                    </h3>
+                  </div>
                   <hr>
                   <ul class="has-text-left">
-                    <li>Instalações de Equipamentos em Geral</li>
-                    <li>Montagem Mecânica e Elétrica de EquipamentosInstalações Mecânicas</li>
+                    <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Equipamentos em Geral</p></li>
+                    <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Montagem Mecânica e Elétrica de Equipamentos </p></li>
+                    <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Instalações Mecânicas</p></li>
                   </ul>
                   <br>
                 </div>
               </div>
             </span>
-          </div>
-          <!-- Coordenação de Obra -->
         </div>
       </div>
     </section>

@@ -9,6 +9,19 @@
       CcHeader,
       nprogressContainer,
       CcFooter
+    },
+    data: () => ({
+      stitle: 'Megaproject',
+      ssubtitle: 'Subtitle'
+    }),
+    updated () {
+      this.loadUpdateTitle()
+    },
+    methods: {
+      loadUpdateTitle: function () {
+        this.stitle = this.$store.state.stitle.stitle
+        this.ssubtitle = this.$store.state.ssubtitle.ssubtitle
+      }
     }
   }
 </script>
@@ -17,20 +30,32 @@
   <div id="app">
     <nprogress-container></nprogress-container>
     <cc-header></cc-header>
-    <section class="container is-fullheight">
-      <router-view></router-view>
+    <!-- Slide -->
+    <section class="hero is-primary is-medium header-image ">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-2">
+            {{stitle}}
+          </h1>
+          <h2 class="subtitle is-5">
+            {{ssubtitle}}
+          </h2>
+        </div>
+      </div>
     </section>
+    <!-- End Slide -->
+    <div class="background">
+      <section class="container is-fullheight ">
+        <router-view></router-view>
+      </section>
+    </div>
     <cc-footer></cc-footer>
   </div>
 </template>
 
 <style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   .nprogress-container {
@@ -58,4 +83,22 @@
 
   }
   }
+
+  .header-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('assets/img/slide1.jpg');
+    margin-top: 5px;
+  }
+
+  .subtitle {
+    font-weight: 300;
+    margin-bottom: 20px;
+    word-break: break-word;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .background {
+    background-color: #F0F0F0;
+  }
+
+
 </style>
