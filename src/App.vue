@@ -93,12 +93,18 @@
     font-weight: 300;
     margin-bottom: 20px;
     word-break: break-word;
-    color: rgba(255, 255, 255, 0.7);
+    //color: rgba(255, 255, 255, 0.7);
   }
 
   .background {
     background-color: #F0F0F0;
   }
 
+  .footer-section {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem 1.5rem 1.5rem;
+  }
 
 </style>

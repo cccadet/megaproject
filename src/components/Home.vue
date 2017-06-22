@@ -25,7 +25,29 @@
 
 <template>
   <div>
-    Home
+    <br>
+    <div class="box">
+      <h1 class="title">
+        Megaproject
+        </h1>
+      <br>
+      <div>
+        <p>
+          A MEGAPROJECT tem profissionais com sólida
+          experiência no setor industrial em geral, com
+          expertise no setor de alimentos. Atua na área de
+          “projetos” desde a definição de capacidades,
+          escolha de equipamentos, projetos mecânicos,
+          instalações de equipamentos e montagem
+          mecânica.
+
+
+          Possui uma equipe de profissionais com experiência
+          no mercado e com conhecimento técnico
+          abrangente.
+          </p>
+      </div>
+    </div>
   </div>
 </template>
 

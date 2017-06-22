@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="footer">
+  <div class="footer footer-section has-shadow">
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
