@@ -49,6 +49,7 @@
         <router-view></router-view>
       </section>
     </div>
+    <br>
     <cc-footer></cc-footer>
   </div>
 </template>
@@ -93,7 +94,7 @@
     font-weight: 300;
     margin-bottom: 20px;
     word-break: break-word;
-    //color: rgba(255, 255, 255, 0.7);
+    color: #C1C1C1;
   }
 
   .background {
@@ -105,6 +106,12 @@
     bottom: 0;
     left: 0;
     padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .subtitle-form{
+    color: rgba(0,0,0,.44);
+    font-size: small;
+    font-weight: 500;
   }
 
 </style>

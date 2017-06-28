@@ -9,6 +9,8 @@ import {sync} from 'vuex-router-sync'
 import mutations from './vuex/mutations'
 import store from './vuex/store'
 import CcNProgress from 'vue-nprogress'
+import VeeValidate from 'vee-validate'
+import messagesBR from '../node_modules/vee-validate/dist/locale/pt_BR'
 
 Vue.config.productionTip = false
 
@@ -25,12 +27,17 @@ sync(store, router)
 Vue.use(CcNProgress)
 const nprogress = new CcNProgress({parent: '.nprogress-container'})
 
+/* VeValidator */
+VeeValidate.Validator.addLocale(messagesBR)
+Vue.use(VeeValidate, {locale: 'pt_BR', events: 'blur'})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
   mutations,
+  VeeValidate,
   render: h => h(App),
   nprogress
 }).$mount('#app')
