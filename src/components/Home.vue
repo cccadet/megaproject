@@ -3,7 +3,7 @@
     name: 'Home',
     data: () => ({
       stitle: 'Megaproject',
-      ssubtitle: 'Subtítulo'
+      ssubtitle: 'Sobre nós'
     }),
     created () {
       this.updateTitle()
@@ -48,6 +48,13 @@
           </p>
       </div>
     </div>
+    <div class="box">
+      <div id="your-application-id">
+        <photos source="https://www.mockaroo.com/8e9a75b0/download?count=10&key=e2db8d80"></photos>
+        <theater></theater>
+      </div>
+    </div>
+    <br>
   </div>
 </template>
 

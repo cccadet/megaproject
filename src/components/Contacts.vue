@@ -4,8 +4,25 @@
     data: () => ({
       email: '',
       nome: '',
-      mensagem: ''
-    })
+      mensagem: '',
+      stitle: 'Contato',
+      ssubtitle: 'Deixe sua dúvida que entraremos em contato'
+    }),
+    created () {
+      this.updateTitle()
+    },
+    methods: {
+      updateTitle: function () {
+        const payload = {
+          stitle: this.stitle
+        }
+        this.$store.commit('CHANGE_STITLE', payload)
+        const payload2 = {
+          ssubtitle: this.ssubtitle
+        }
+        this.$store.commit('CHANGE_SSUBTITLE', payload2)
+      }
+    }
   })
 </script>
 
@@ -19,10 +36,18 @@
             <div class="hero-body">
               <div class="container">
                 <h1 class="title">
-                  MegaProject
+                  <a href="/" class="">
+                    <img
+                      src="../assets/img/logo.jpg"
+                      alt="MegaProject"
+                      title="MegaProject"
+                      class="">
+                  </a>
                 </h1>
-                <h2 class="subtitle">
-                  Hero subtitle
+                <h2 class="subtitle-contact">
+                  <p><strong>Endereço:</strong> Rua Sete de Abril, nº100, Languiru - Teutônia-RS</p>
+                  <p><strong>Email: </strong>contato@megaproject.com.br</p>
+                  <p><strong>Fone: </strong>+55 51 98118-9789</p>
                 </h2>
               </div>
             </div>
@@ -32,21 +57,21 @@
       <div class="column is-half">
         <div class="box">
           <h2 class="subtitle">
-            <strong>Entre em Contato!</strong>
+            <strong>Formulário de Contato:</strong>
           </h2>
           <form>
             <div class="field">
               <label class="label">Nome
               </label>
               <p class="control has-icons-left has-icons-right">
-                <input class="input" v-model="nome" v-validate="'required'"
+                <input class="input" autofocus v-model="nome" v-validate="'required'"
                        :class="{'input': true, 'is-danger': errors.has('nome') }" type="text" placeholder="Informe seu Nome" name="nome" required>
                 <span class="icon is-small is-left">
                 <i class="fa fa-user"></i>
               </span>
                 <span class="icon is-small is-right">
                 <i v-if="errors.has('nome')" class="fa fa-warning"></i>
-                <i v-else="errors.has('nome')" class="fa fa-check"></i>
+                <i v-else="errors.has('nome')" class="fa fa-check "></i>
               </span>
               </p>
               <p><span v-show="errors.has('nome')" class="subtitle-form help is-danger">{{ errors.first('nome') }}</span></p>

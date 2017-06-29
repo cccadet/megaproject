@@ -4,7 +4,7 @@
     name: 'Services',
     data: () => ({
       stitle: 'Serviços',
-      ssubtitle: 'Subtítulo'
+      ssubtitle: 'Prestamos serviços de qualidade em diferentes áreas de conhecimento'
     }),
     created () {
       this.updateTitle()
@@ -34,7 +34,7 @@
               <div class="columns ">
                 <div class="column is-5">
                   <div class="image is-1by1">
-                    <img src="../assets/img/imagem2.jpg">
+                    <img src="../assets/img/services/automacao.jpg">
                   </div>
                 </div>
                 <div class="column is-7 ">
@@ -67,7 +67,7 @@
             <div class="columns ">
               <div class="column is-5">
                 <div class="image is-1by1">
-                  <img src="../assets/img/imagem2.jpg">
+                  <img src="../assets/img/services/ger-projetos.jpg">
                 </div>
               </div>
               <div class="column is-7 ">
@@ -84,7 +84,7 @@
                 <ul class="has-text-left">
                   <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Cronogramas</p></li>
                   <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Equalização de Orçamentos</p></li>
-                  <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Desenvolvimento de Memorial Descritivo</p></li>
+                  <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Memorial Descritivo</p></li>
                   <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Controle de Entrega de Materiais</p></li>
                   <li><p><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp&nbsp Definição de Equipamentos</p></li>
                 </ul>
@@ -99,7 +99,7 @@
               <div class="columns ">
                 <div class="column is-5">
                   <div class="image is-1by1">
-                    <img src="../assets/img/imagem2.jpg">
+                    <img src="../assets/img/services/coor-obra.jpg">
                   </div>
                 </div>
                 <div class="column is-7 ">
@@ -159,7 +159,7 @@
             <div class="columns ">
               <div class="column is-5">
                 <div class="image is-1by1">
-                  <img src="../assets/img/imagem2.jpg">
+                  <img src="../assets/img/services/montagem.png">
                 </div>
               </div>
               <div class="column is-7 ">
@@ -191,7 +191,7 @@
             <div class="columns ">
               <div class="column is-5">
                 <div class="image is-1by1">
-                  <img src="../assets/img/imagem2.jpg">
+                  <img src="../assets/img/services/plano-manut.jpg">
                 </div>
               </div>
               <div class="column is-7 ">

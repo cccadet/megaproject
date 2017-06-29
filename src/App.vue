@@ -17,6 +17,9 @@
     updated () {
       this.loadUpdateTitle()
     },
+    mounted () {
+      this.loadUpdateTitle()
+    },
     methods: {
       loadUpdateTitle: function () {
         this.stitle = this.$store.state.stitle.stitle
@@ -91,10 +94,20 @@
   }
 
   .subtitle {
-    font-weight: 300;
-    margin-bottom: 20px;
-    word-break: break-word;
-    color: #C1C1C1;
+     font-weight: 300;
+     margin-bottom: 20px;
+     word-break: break-word;
+     color: #C1C1C1;
+   }
+
+  .subtitle-contact {
+    color: rgba(0, 0, 0, 0.58);
+  }
+
+  .subtitle-form{
+    color: rgba(0,0,0,.44);
+    font-size: small;
+    font-weight: 500;
   }
 
   .background {
@@ -106,12 +119,6 @@
     bottom: 0;
     left: 0;
     padding: 1rem 1.5rem 1.5rem;
-  }
-
-  .subtitle-form{
-    color: rgba(0,0,0,.44);
-    font-size: small;
-    font-weight: 500;
   }
 
 </style>
